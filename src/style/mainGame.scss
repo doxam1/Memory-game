@@ -2,11 +2,21 @@
   padding: 1em;
   display: grid;
   gap: 1em;
-  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(12vh, 1fr));
 
   & .square {
     border: 1px solid;
-    height: 320px;
+    height: 12vh;
+  }
+}
+
+@media (min-width: 700px) {
+  .mainGame {
+    grid-template-columns: repeat(auto-fill, minmax(30vh, 1fr));
+
+    & .square {
+      height: 30vh;
+    }
   }
 }
 
