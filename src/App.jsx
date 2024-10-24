@@ -4,6 +4,7 @@ import MainGame from "./components/MainGame";
 import { useState } from "react";
 
 import "./style/Main.scss";
+import "./components/mainGameSwivel";
 
 function App() {
   const [clickedImages, setClickedImages] = useState([]);

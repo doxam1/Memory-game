@@ -12,6 +12,14 @@ const MainGame = ({
   const [imageArr, setImageArr] = useState([]);
 
   const handleClick = (imageId) => {
+    const mainGameDiv = document.querySelector(".mainGame");
+
+    mainGameDiv.classList.add("swivel");
+
+    setTimeout(() => {
+      mainGameDiv.classList.remove("swivel");
+    }, 500);
+
     setImageArr(shuffle(imageArr));
     if (clickedImages.includes(imageId)) {
       setClickedImages([]);
@@ -26,7 +34,6 @@ const MainGame = ({
       ? setBestScore(clickedImages.length + 1)
       : setBestScore(bestScore);
   }
-
 
   useEffect(() => {
     async function fetchImage() {
